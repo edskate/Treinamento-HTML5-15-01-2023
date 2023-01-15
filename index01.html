@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript orientação a objetos.</title>
+</head>
+<script>
+    function acendeLampada() {
+        document.getElementById("luz").src = "lampada-acesa.jpg";
+    }
+
+    function apagalampada() {
+        document.getElementById("luz").src = "lampada-apagada.jpg";
+    }
+
+    function quebralampada() {
+        document.getElementById("luz").src = "lampada-quebrada.jpg";
+    }
+    function mudarCor(novaCor) {
+        var elemento = document.getElementById("para1");
+        elemento.style.color = novaCor;
+      }
+   
+</script>
+
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout="apagalampada()"
+        onclick="quebralampada()" />
+
+        <p id="para1">Algum texto de exemplo</p>
+        <button onclick="mudarCor('blue');">Azul</button>
+        <button onclick="mudarCor('red');">Vermelho</button>
+        <button onclick="mudarCor('pink');">rosa</button>
+        <button onclick="mudarCor('Yellow');">Amarelo</button>
+
+    
+</body>
+
+</html>
